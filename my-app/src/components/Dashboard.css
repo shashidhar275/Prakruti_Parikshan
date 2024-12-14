@@ -8,9 +8,11 @@ body, html {
   /* Dashboard Container */
   .dashboard-container {
     background-color: #e8eaed;
-    max-height: 100vh;
+    min-height: 100vh; /* Allow content to expand */
+    overflow-y: auto; /* Enable vertical scrolling */
     padding: 10px 15px;
   }
+  
   
   /* Top Bar */
   .top-bar {
@@ -137,4 +139,9 @@ body, html {
   
   .users-name{
     display: inline-block;
+  }
+
+
+  .gender-age{
+    display: flex;
   }

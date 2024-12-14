@@ -8,13 +8,12 @@
 /* Full Viewport Height */
 html, body {
   height: 100%;
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
-  overflow: hidden; /* Prevent scroll for cleaner UI */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Keep horizontal overflow hidden */
+  overflow-y: auto;   /* Allow vertical scrolling */
 }
+
 
 /* Auth Container */
 .auth-container {
