@@ -7,6 +7,12 @@ import "./App.css";
 
 function App() {
   const [showPopup, setShowPopup] = useState(true);
+  const [userName, setUserName] = useState(""); // State to hold the logged-in user’s name
+
+  // Handle the login process
+  const onLogin = (name) => {
+    setUserName(name); // Set the user name received from AuthPage
+  };
 
   return (
     <Router>
@@ -15,8 +21,8 @@ function App() {
           <Popup onClose={() => setShowPopup(false)} />
         ) : (
           <Routes>
-            <Route path="/" element={<AuthPage />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<AuthPage onLogin={onLogin} />} />
+            <Route path="/dashboard" element={<Dashboard userName={userName} />} />
           </Routes>
         )}
       </div>
