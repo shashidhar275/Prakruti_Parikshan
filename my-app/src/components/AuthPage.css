@@ -1,0 +1,102 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Full Viewport Height */
+  html, body {
+    height: 100%; /* Ensure full height of the viewport */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light background for the page */
+  }
+  
+  /* Auth Container */
+  .auth-container {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Logo Section */
+  .auth-logo {
+    margin-bottom: 30px; /* Space between logo and form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 120px; /* Responsive logo width */
+    margin-bottom: 20px; /* Space between logo and heading */
+  }
+  
+  /* Auth Form Styling */
+  .auth-form {
+    width: 100%;
+    max-width: 400px; /* Maximum width for the form */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .auth-form h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .input-field {
+    width: 100%; /* Full width input fields */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Submit Button */
+  .auth-btn {
+    width: 100%; /* Full width button */
+    background-color: #4caf50; /* Green background */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .auth-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  /* Switch Between Login and Signup */
+  .toggle-auth-mode {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .toggle-auth-mode:hover {
+    text-decoration: underline;
+  }
+  

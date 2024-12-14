@@ -1,0 +1,44 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height of the viewport */
+  width: 100%; /* Ensure full width of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Splash Screen Styling */
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full height of viewport */
+  width: 100%; /* Full width of viewport */
+  background-color: #ffffff; /* White background */
+}
+
+.splash-screen img {
+  max-width: 90%; /* Make the image responsive */
+  height: auto;
+  margin: auto;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  text-align: center;
+  margin: auto;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  color: #333; /* Dark text */
+}

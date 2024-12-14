@@ -1,0 +1,140 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Dashboard Container */
+  .dashboard-container {
+    background-color: #e8eaed;
+    max-height: 100vh;
+    padding: 10px 15px;
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    display: flex;
+    /* position: fixed; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .username {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .username span {
+    color: #0089cf;
+  }
+  
+  .notification-icon {
+    font-size: 1rem;
+    color: #0089cf;
+    cursor: pointer;
+  }
+  
+  /* Total Observations */
+  .total-card {
+    background: linear-gradient(135deg, #00b3e6, #0089cf);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-count {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 1.1rem;
+    color: #333333;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+  }
+  
+  /* Member List */
+  .member-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .member-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .card-left-icon {
+    display: inline-block;
+  }
+  
+  .user-icon {
+    font-size: 1rem;
+    color: #0089cf;
+  }
+  
+  .card-content {
+    flex: 1;
+  }
+  
+  .member-name {
+    display: inline-block;
+    font-size: 1rem;
+    padding-left: 6px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .member-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555555;
+  }
+  
+  .icon {
+    font-size: 1rem;
+    color: #0089cf;
+  }
+  
+  .icon-img {
+    margin-left: 55px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .users-name{
+    display: inline-block;
+  }
