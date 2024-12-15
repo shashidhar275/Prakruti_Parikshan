@@ -1,15 +1,50 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserPlus, faVenusMars, faLocationDot, faBell } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUserPlus,
+  faVenusMars,
+  faLocationDot,
+  faBell,
+  faStethoscope,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Dashboard.css";
 
 // Utility function to generate random members
 const getRandomMembers = (size, memberName) => {
   const indianNames = {
-    Male: ["Aarav", "Sanjay", "Rahul", "Karthik", "Anil", "Vijay", "Prakash", "Rajesh", "Manoj"],
-    Female: ["Ananya", "Meera", "Lakshmi", "Pooja", "Riya", "Sita", "Priya", "Sneha", "Deepika"],
+    Male: [
+      "Aarav",
+      "Sanjay",
+      "Rahul",
+      "Karthik",
+      "Anil",
+      "Vijay",
+      "Prakash",
+      "Rajesh",
+      "Manoj",
+    ],
+    Female: [
+      "Ananya",
+      "Meera",
+      "Lakshmi",
+      "Pooja",
+      "Riya",
+      "Sita",
+      "Priya",
+      "Sneha",
+      "Deepika",
+    ],
   };
-  const karnatakaCities = ["Bangalore", "Mysore", "Hubli", "Belgaum", "Mangalore", "Davangere", "Shimoga", "Bijapur"];
+  const karnatakaCities = [
+    "Bangalore",
+    "Mysore",
+    "Hubli",
+    "Belgaum",
+    "Mangalore",
+    "Davangere",
+    "Shimoga",
+    "Bijapur",
+  ];
 
   const getRandomName = (gender) =>
     indianNames[gender][Math.floor(Math.random() * indianNames[gender].length)];
@@ -17,9 +52,12 @@ const getRandomMembers = (size, memberName) => {
   const members = [];
   for (let i = 0; i < size; i++) {
     const gender = Math.random() > 0.5 ? "Male" : "Female";
-    const name = gender === "Male" ? getRandomName("Male") : getRandomName("Female");
+    const name =
+      gender === "Male" ? getRandomName("Male") : getRandomName("Female");
     const age = Math.floor(Math.random() * 7) + 20; // Age between 20 to 26
-    const location = `${karnatakaCities[Math.floor(Math.random() * karnatakaCities.length)]}, Karnataka`;
+    const location = `${
+      karnatakaCities[Math.floor(Math.random() * karnatakaCities.length)]
+    }, Karnataka`;
 
     members.push({
       name,
@@ -36,9 +74,13 @@ const Dashboard = ({ userName }) => {
   const [totalMembers, setTotalMembers] = useState(0);
 
   // Generate data arrays
-  const sanjayMembers = getRandomMembers(3, "Sanjay");
-  const shashidharMembers = getRandomMembers(12, "Shashidhar");
-  const atharvaMembers = getRandomMembers(14, "Atharva");
+  const shashidharMembers = getRandomMembers(78, "Shashidhar");
+  const atharvaMembers = getRandomMembers(194, "Atharva");
+  const vinayMembers = getRandomMembers(147, "Vinay");
+  const prajwalMembers = getRandomMembers(189, "Prajwal");
+  const rahulMembers = getRandomMembers(153, "Rahul");
+  const manjunathMembers = getRandomMembers(198, "Manjunath");
+  const todaysObservation = 41;
 
   useEffect(() => {
     // Determine which array to show based on userName
@@ -55,6 +97,22 @@ const Dashboard = ({ userName }) => {
         setMembers(atharvaMembers);
         setTotalMembers(atharvaMembers.length);
         break;
+      case "Vinay":
+        setMembers(vinayMembers);
+        setTotalMembers(vinayMembers.length);
+        break;
+      case "Prajwal":
+        setMembers(prajwalMembers);
+        setTotalMembers(prajwalMembers.length);
+        break;
+      case "Rahul":
+        setMembers(rahulMembers);
+        setTotalMembers(rahulMembers.length);
+        break;
+      case "Manjunath":
+        setMembers(majunathMembers);
+        setTotalMembers(majunathMembers.length);
+        break;
       default:
         setMembers([]);
         setTotalMembers(0);
@@ -62,7 +120,7 @@ const Dashboard = ({ userName }) => {
   }, [userName]);
 
   return (
-    <div className="dashboard-container">
+    <div>
       {/* Top Bar */}
       <div
         className="top-bar"
@@ -70,21 +128,36 @@ const Dashboard = ({ userName }) => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#f5f5f5",
-          borderBottom: "1px solid #ddd",
+          backgroundColor: "#fff",
+          borderBottom: "1px solid white",
           fontFamily: "Arial, sans-serif",
         }}
       >
         {/* Left Side - Username with Doctor Icon */}
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <span role="img" aria-label="doctor" style={{ fontSize: "1.5rem" }}>
-            🩺
-          </span>
+          <div
+            className="stethoscope"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: "36px",
+              padding: "10px 10px",
+              backgroundColor: "#e8eaed",
+            }}
+          >
+            <span role="img" aria-label="doctor">
+              <FontAwesomeIcon
+                icon={faStethoscope}
+                style={{ color: "#03296e", fontSize: "16px" }}
+              />
+            </span>
+          </div>
           <span
             style={{
               fontSize: "1.2rem",
               fontWeight: "600",
-              color: "#333",
+              color: "#03296e",
             }}
           >
             {userName} {/* Display the user's name dynamically */}
@@ -102,85 +175,111 @@ const Dashboard = ({ userName }) => {
               color: "#666",
             }}
           >
-<FontAwesomeIcon icon={faBell} className="notification-icon" style={{ color: '#007598', fontSize: '24px' }} />
-</span>
-        </div>
-      </div>
-
-      {/* Total Observations */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          backgroundColor: "#3c879e",
-          padding: "10px 20px",
-          borderRadius: "8px",
-          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <img
-            src="./Images/shieldCheck.jpg"
-            alt="Shield Check"
-            style={{ width: "40px", height: "40px" }}
-          />
-          <span style={{ fontSize: "1.2rem", fontWeight: "600", color: "#333" }}>
-            Total Prakriti Observation
+            <FontAwesomeIcon
+              icon={faBell}
+              className="notification-icon"
+              style={{ color: "#007598", fontSize: "24px" }}
+            />
           </span>
         </div>
-
-        {/* Display Total Members */}
-        <div
-          style={{
-            backgroundColor: "#fff",
-            color: "#333",
-            padding: "10px 20px",
-            borderRadius: "6px",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
-            fontSize: "1.5rem",
-            fontWeight: "700",
-          }}
-        >
-          {totalMembers}
-        </div>
       </div>
 
-      {/* Today's Observations */}
-      <h2 className="section-title">Today's Prakriti Observations ({totalMembers})</h2>
-      <div className="member-list">
-        {members.map((member, index) => (
-          <div key={index} className="member-card">
-            <div className="card-content">
-              <div className="users-name">
-                <div className="card-left-icon">
-                  <FontAwesomeIcon icon={faUserPlus} style={{ color: '#007598'}} className="user-icon" />
+      <div className="dashboard-container">
+        {/* Total Observations */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            background:
+              "linear-gradient(145deg, rgba(232, 87, 237, 0.15) 0%, rgba(109, 137, 69, 0.15) 100%), linear-gradient(75deg, rgb(33, 138, 184), rgb(0, 241, 181))",
+            padding: "20px 20px",
+            borderRadius: "8px",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <img
+              src="./Images/shieldCheck1.png"
+              alt="Shield Check"
+              style={{ width: "55px", height: "55px" }}
+            />
+            <span
+              style={{ fontSize: "1.2rem", fontWeight: "300", color: "white" }}
+            >
+              Total Prakriti Observation
+            </span>
+          </div>
+
+          {/* Display Total Members */}
+          <div
+            style={{
+              backgroundColor: "#fff",
+              color: "#333",
+              padding: "10px 20px",
+              borderRadius: "6px",
+              border: "1px dashed grey",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
+              fontSize: "1.5rem",
+              fontWeight: "700",
+              padding: "10px 30px",
+            }}
+          >
+            {totalMembers}
+          </div>
+        </div>
+
+        {/* Today's Observations */}
+        <h2 className="section-title">
+          Todays Prakriti observation{" "}
+          <span style={{ color: "#1F7EA1" }}>({todaysObservation})</span>
+        </h2>
+        <div className="member-list">
+          {members.slice(0, 42).map((member, index) => (
+            <div key={index} className="member-card">
+              <div className="card-content">
+                <div className="users-name">
+                  <div className="card-left-icon">
+                    <FontAwesomeIcon
+                      icon={faUserPlus}
+                      style={{ color: "#007598" }}
+                      className="user-icon"
+                    />
+                  </div>
+                  <h3 className="member-name">{member.name}</h3>
                 </div>
-                <h3 className="member-name">{member.name}</h3>
-              </div>
-              <div className="member-details">
-               <div className="gender-age">
-                <div className="detail">
-                    <FontAwesomeIcon icon={faVenusMars} style={{ color: '#007598'}} className="icon" />
-                    <span>{member.gender}</span>
+                <div className="member-details">
+                  <div className="gender-age">
+                    <div className="detail">
+                      <FontAwesomeIcon
+                        icon={faVenusMars}
+                        style={{ color: "#007598" }}
+                        className="icon"
+                      />
+                      <span>{member.gender}</span>
+                    </div>
+                    <div className="detail">
+                      <img
+                        src="./Images/ageImg.png"
+                        alt="Age"
+                        className="icon-img"
+                      />
+                      <span>{member.age} yrs</span>
+                    </div>
                   </div>
                   <div className="detail">
-                    <img
-                      src="./Images/ageImg.png"
-                      alt="Age"
-                      className="icon-img"
+                    <FontAwesomeIcon
+                      icon={faLocationDot}
+                      style={{ color: "#007598" }}
+                      className="icon"
                     />
-                    <span>{member.age} yrs</span>
+                    <span>{member.location}</span>
                   </div>
-               </div>
-                <div className="detail">
-                  <FontAwesomeIcon icon={faLocationDot} style={{ color: '#007598'}} className="icon" />
-                  <span>{member.location}</span>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

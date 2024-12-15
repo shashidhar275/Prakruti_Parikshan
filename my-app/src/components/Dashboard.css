@@ -22,7 +22,7 @@ body, html {
     align-items: center;
     background-color: #ffffff;
     padding: 10px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     /* border-radius: 10px; */
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   }
@@ -67,7 +67,7 @@ body, html {
   /* Section Title */
   .section-title {
     font-size: 1.1rem;
-    color: #333333;
+    color: #03296e;
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 20px;
