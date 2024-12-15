@@ -76,11 +76,11 @@ const Dashboard = ({ userName }) => {
   // Generate data arrays
   const shashidharMembers = getRandomMembers(78, "Shashidhar");
   const atharvaMembers = getRandomMembers(194, "Atharva");
-  const vinayMembers = getRandomMembers(147, "Vinay");
+  const vinayMembers = getRandomMembers(152, "Vinay");
   const prajwalMembers = getRandomMembers(189, "Prajwal");
-  const rahulMembers = getRandomMembers(153, "Rahul");
+  const rahulMembers = getRandomMembers(160, "Rahul");
   const manjunathMembers = getRandomMembers(198, "Manjunath");
-  const todaysObservation = 41;
+  const todaysObservation = 25;
 
   useEffect(() => {
     // Determine which array to show based on userName
@@ -110,7 +110,7 @@ const Dashboard = ({ userName }) => {
         setTotalMembers(rahulMembers.length);
         break;
       case "Manjunath":
-        setMembers(majunathMembers);
+        setMembers(manjunathMembers);
         setTotalMembers(majunathMembers.length);
         break;
       default:
@@ -154,6 +154,7 @@ const Dashboard = ({ userName }) => {
             </span>
           </div>
           <span
+            className="poppins-thin"
             style={{
               fontSize: "1.2rem",
               fontWeight: "600",
@@ -184,7 +185,7 @@ const Dashboard = ({ userName }) => {
         </div>
       </div>
 
-      <div className="dashboard-container">
+      <div className="dashboard-container poppins-regular">
         {/* Total Observations */}
         <div
           style={{
@@ -192,10 +193,11 @@ const Dashboard = ({ userName }) => {
             alignItems: "center",
             justifyContent: "space-between",
             background:
-              "linear-gradient(145deg, rgba(232, 87, 237, 0.15) 0%, rgba(109, 137, 69, 0.15) 100%), linear-gradient(75deg, rgb(33, 138, 184), rgb(0, 241, 181))",
-            padding: "20px 20px",
+              "linear-gradient(145deg, rgba(232, 87, 237, 0.15) 0%, rgba(109, 137, 69, 0.15) 100%), linear-gradient(75deg, rgb(32 86 109), rgb(0, 241, 239))",
+            padding: "25px 20px",
             borderRadius: "8px",
             boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+            marginTop: "10px"
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -204,11 +206,13 @@ const Dashboard = ({ userName }) => {
               alt="Shield Check"
               style={{ width: "55px", height: "55px" }}
             />
-            <span
-              style={{ fontSize: "1.2rem", fontWeight: "300", color: "white" }}
-            >
-              Total Prakriti Observation
-            </span>
+            <div className= "poppins-extralight" style={{width: "50%"}}>
+              <span
+                style={{ fontSize: "1.2rem", fontWeight: "300", color: "white" }}
+              >
+                Total Prakriti Observation
+              </span>
+            </div>
           </div>
 
           {/* Display Total Members */}
@@ -222,7 +226,8 @@ const Dashboard = ({ userName }) => {
               boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
               fontSize: "1.5rem",
               fontWeight: "700",
-              padding: "10px 30px",
+              padding: "16px 30px",
+              marginRight: "22px"
             }}
           >
             {totalMembers}

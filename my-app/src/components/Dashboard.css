@@ -139,9 +139,11 @@ body, html {
   
   .users-name{
     display: inline-block;
+    margin-bottom: 1.5px;
   }
 
 
   .gender-age{
     display: flex;
+    margin-bottom: 1.5px;
   }
