@@ -227,7 +227,7 @@ const Dashboard = ({ userName }) => {
               fontSize: "1.5rem",
               fontWeight: "700",
               padding: "16px 30px",
-              marginRight: "22px"
+              marginRight: "6px"
             }}
           >
             {totalMembers}
