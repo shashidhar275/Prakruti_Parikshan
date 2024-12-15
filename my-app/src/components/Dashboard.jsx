@@ -185,7 +185,7 @@ const Dashboard = ({ userName }) => {
         </div>
       </div>
 
-      <div className="dashboard-container poppins-regular">
+      <div className="dashboard-container">
         {/* Total Observations */}
         <div
           style={{
@@ -206,7 +206,7 @@ const Dashboard = ({ userName }) => {
               alt="Shield Check"
               style={{ width: "55px", height: "55px" }}
             />
-            <div className= "poppins-extralight" style={{width: "50%"}}>
+            <div className= "poppins-extralight">
               <span
                 style={{ fontSize: "1.2rem", fontWeight: "300", color: "white" }}
               >
@@ -235,10 +235,10 @@ const Dashboard = ({ userName }) => {
         </div>
 
         {/* Today's Observations */}
-        <h2 className="section-title">
+        <h4 style={{  fontWeight: "600" }} className="section-title poppins-extralight">
           Todays Prakriti observation{" "}
           <span style={{ color: "#1F7EA1" }}>({todaysObservation})</span>
-        </h2>
+        </h4>
         <div className="member-list">
           {members.slice(0, 42).map((member, index) => (
             <div key={index} className="member-card">
