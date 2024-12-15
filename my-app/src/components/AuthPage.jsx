@@ -17,7 +17,8 @@ function AuthPage({ onLogin }) {
     "9035004194": "Vinay",
     "7760828133": "Prajwal",
     "7676349077": "Rahul",
-    "8431192651": "Manjunath"
+    "8431192651": "Manjunath",
+    "7996546587": "Yogesh"
   };
 
   const handleInputChange = (e) => {
