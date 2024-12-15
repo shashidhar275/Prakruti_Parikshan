@@ -102,7 +102,7 @@ const Dashboard = ({ userName }) => {
               color: "#666",
             }}
           >
-<FontAwesomeIcon icon={faBell} className="notification-icon" style={{ color: 'rgb(60, 135, 158)', fontSize: '24px' }} />
+<FontAwesomeIcon icon={faBell} className="notification-icon" style={{ color: '#007598', fontSize: '24px' }} />
 </span>
         </div>
       </div>
@@ -154,19 +154,19 @@ const Dashboard = ({ userName }) => {
             <div className="card-content">
               <div className="users-name">
                 <div className="card-left-icon">
-                  <FontAwesomeIcon icon={faUserPlus} className="user-icon" />
+                  <FontAwesomeIcon icon={faUserPlus} style={{ color: '#007598'}} className="user-icon" />
                 </div>
                 <h3 className="member-name">{member.name}</h3>
               </div>
               <div className="member-details">
                <div className="gender-age">
                 <div className="detail">
-                    <FontAwesomeIcon icon={faVenusMars} className="icon" />
+                    <FontAwesomeIcon icon={faVenusMars} style={{ color: '#007598'}} className="icon" />
                     <span>{member.gender}</span>
                   </div>
                   <div className="detail">
                     <img
-                      src="./Images/age.png"
+                      src="./Images/ageImg.png"
                       alt="Age"
                       className="icon-img"
                     />
@@ -174,7 +174,7 @@ const Dashboard = ({ userName }) => {
                   </div>
                </div>
                 <div className="detail">
-                  <FontAwesomeIcon icon={faLocationDot} className="icon" />
+                  <FontAwesomeIcon icon={faLocationDot} style={{ color: '#007598'}} className="icon" />
                   <span>{member.location}</span>
                 </div>
               </div>

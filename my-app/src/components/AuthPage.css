@@ -34,8 +34,8 @@ html, body {
   height: 90%;
   padding: 40px 20px;
   background-color: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* border-radius: 15px; */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,34 +44,35 @@ html, body {
 
 /* Logo Section */
 .auth-logo {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+
 .logo-img {
-  width: 160px;
+  width: 190px;
   max-width: 200px; /* Make image responsive */
 }
 
 /* Form Heading */
 .auth-form h3 {
   margin-bottom: 20px;
+  margin-left: -180px;
   font-size: 24px;
-  color: #333;
-  text-align: center;
+  color: #007598;
   font-weight: bold;
 }
 
 /* Form Label */
 .form-label {
   font-size: 14px;
-  color: #444;
+  color: #5e5e5e;
   margin-bottom: 8px;
   width: 100%;
   text-align: left;
-  font-weight: 600;
+  font-weight: 100;
 }
 
 /* Input Fields */
@@ -80,6 +81,7 @@ html, body {
   padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
+  color: #007598;
   border-radius: 8px;
   font-size: 14px;
   transition: border-color 0.3s ease;
@@ -93,7 +95,7 @@ html, body {
 /* Submit Button */
 .auth-btn {
   width: 100%;
-  background-color: #4caf50;
+  background-color: #007598;
   color: white;
   padding: 12px;
   border: none;
@@ -102,10 +104,6 @@ html, body {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.auth-btn:hover {
-  background-color: #45a049;
 }
 
 /* Media Queries for Responsiveness */
@@ -119,7 +117,7 @@ html, body {
   }
 }
 
-/* Animation */
+/* Animation
 @keyframes slideIn {
   from {
     transform: translateY(100%);
@@ -129,8 +127,13 @@ html, body {
     transform: translateY(0);
     opacity: 1;
   }
+} */
+
+.login-issue{
+  margin-top: 40px;
 }
 
-p{
-  margin-top: 40px;
+.form-fill-link{
+  margin-top: 14px;
+  color: #007598;
 }

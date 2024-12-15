@@ -94,10 +94,11 @@ function AuthPage({ onLogin }) {
           </select>
 
           <button type="submit" className="auth-btn">
-            Login
+            Send OTP
           </button>
         </form>
-        <p>Not able to login?</p>
+        <p className="login-issue">Not able to login?</p>
+        <a href="#" className="form-fill-link">Please fill this form.</a>
       </div>
     </div>
   );
