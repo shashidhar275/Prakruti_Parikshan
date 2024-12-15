@@ -32,7 +32,7 @@ html, body {
   max-width: 400px;
   /* height: auto; Auto height for better spacing */
   height: 90%;
-  padding: 40px 20px;
+  padding: 0px 20px;
   background-color: #ffffff;
   /* border-radius: 15px; */
   /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
@@ -59,29 +59,30 @@ html, body {
 /* Form Heading */
 .auth-form h3 {
   margin-bottom: 20px;
-  margin-left: -180px;
+  margin-left: -150px;
   font-size: 24px;
-  color: #007598;
+  color: #03566f;
   font-weight: bold;
 }
 
 /* Form Label */
 .form-label {
   font-size: 14px;
-  color: #5e5e5e;
-  margin-bottom: 8px;
+  color: #3e3d3d;
   width: 100%;
   text-align: left;
   font-weight: 100;
+
 }
 
 /* Input Fields */
 .input-field {
+  margin-top: 6px;
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
-  color: #007598;
+  color: #023443;
   border-radius: 8px;
   font-size: 14px;
   transition: border-color 0.3s ease;
@@ -95,7 +96,7 @@ html, body {
 /* Submit Button */
 .auth-btn {
   width: 100%;
-  background-color: #007598;
+  background-color: #1b586a;
   color: white;
   padding: 12px;
   border: none;
@@ -135,5 +136,5 @@ html, body {
 
 .form-fill-link{
   margin-top: 14px;
-  color: #007598;
+  color: #03566f;
 }
