@@ -226,7 +226,7 @@ const Dashboard = ({ userName }) => {
               boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
               fontSize: "1.5rem",
               fontWeight: "700",
-              padding: "16px 30px"
+              padding: "16px 20px"
             }}
           >
             {totalMembers}
@@ -239,7 +239,7 @@ const Dashboard = ({ userName }) => {
           <span style={{ color: "#1F7EA1" }}>({todaysObservation})</span>
         </h4>
         <div className="member-list">
-          {members.slice(0, 42).map((member, index) => (
+          {members.slice(0, todaysObservation).map((member, index) => (
             <div key={index} className="member-card">
               <div className="card-content">
                 <div className="users-name">
