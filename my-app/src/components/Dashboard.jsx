@@ -75,12 +75,12 @@ const Dashboard = ({ userName }) => {
 
   // Generate data arrays
   const shashidharMembers = getRandomMembers(78, "Shashidhar");
-  const atharvaMembers = getRandomMembers(194, "Atharva");
-  const vinayMembers = getRandomMembers(152, "Vinay");
-  const prajwalMembers = getRandomMembers(189, "Prajwal");
-  const rahulMembers = getRandomMembers(160, "Rahul");
-  const manjunathMembers = getRandomMembers(198, "Manjunath");
-  const yogeshMembers = getRandomMembers(183, "Yogesh");
+  const atharvaMembers = getRandomMembers(230, "Atharva");
+  const vinayMembers = getRandomMembers(220, "Vinay");
+  const prajwalMembers = getRandomMembers(215, "Prajwal");
+  const rahulMembers = getRandomMembers(200, "Rahul");
+  const manjunathMembers = getRandomMembers(201, "Manjunath");
+  const yogeshMembers = getRandomMembers(212, "Yogesh");
   const todaysObservation = 25;
 
   useEffect(() => {
