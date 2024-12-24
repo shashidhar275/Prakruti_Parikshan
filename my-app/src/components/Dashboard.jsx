@@ -75,13 +75,13 @@ const Dashboard = ({ userName }) => {
 
   // Generate data arrays
   const shashidharMembers = getRandomMembers(78, "Shashidhar");
-  const atharvaMembers = getRandomMembers(230, "Atharva");
-  const vinayMembers = getRandomMembers(220, "Vinay");
-  const prajwalMembers = getRandomMembers(215, "Prajwal");
-  const rahulMembers = getRandomMembers(200, "Rahul");
-  const manjunathMembers = getRandomMembers(201, "Manjunath");
-  const yogeshMembers = getRandomMembers(212, "Yogesh");
-  const todaysObservation = 25;
+  const atharvaMembers = getRandomMembers(330, "Atharva");
+  const vinayMembers = getRandomMembers(320, "Vinay");
+  const prajwalMembers = getRandomMembers(315, "Prajwal");
+  const rahulMembers = getRandomMembers(300, "Rahul");
+  const manjunathMembers = getRandomMembers(301, "Manjunath");
+  const yogeshMembers = getRandomMembers(312, "Yogesh");
+  const todaysObservation = 20;
 
   useEffect(() => {
     // Determine which array to show based on userName
