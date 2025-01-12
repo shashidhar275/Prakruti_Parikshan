@@ -81,6 +81,7 @@ const Dashboard = ({ userName }) => {
   const rahulMembers = getRandomMembers(300, "Rahul");
   const manjunathMembers = getRandomMembers(301, "Manjunath");
   const yogeshMembers = getRandomMembers(312, "Yogesh");
+  const abhishekMembers = getRandomMembers(219, "Abhishek");
   const todaysObservation = 20;
 
   useEffect(() => {
@@ -117,6 +118,10 @@ const Dashboard = ({ userName }) => {
       case "Yogesh":
         setMembers(yogeshMembers);
         setTotalMembers(yogeshMembers.length);
+        break;
+      case "Abhishek":
+        setMembers(abhishekMembers);
+        setTotalMembers(abhishekMembers.length);
         break;
       default:
         setMembers([]);
